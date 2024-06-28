@@ -1,0 +1,11 @@
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\Businesslayer.dll
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\Businesslayer.pdb
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DataAccessLayer.dll
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DBLibrary.dll
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DBModel.dll
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DataAccessLayer.pdb
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DBLibrary.pdb
+D:\Project\API\iStartWebAPI\Businesslayer\bin\Debug\DBModel.pdb
+D:\Project\API\iStartWebAPI\Businesslayer\obj\Debug\Businesslayer.csprojResolveAssemblyReference.cache
+D:\Project\API\iStartWebAPI\Businesslayer\obj\Debug\Businesslayer.dll
+D:\Project\API\iStartWebAPI\Businesslayer\obj\Debug\Businesslayer.pdb

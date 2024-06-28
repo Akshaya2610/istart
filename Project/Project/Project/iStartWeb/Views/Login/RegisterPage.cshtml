@@ -1,0 +1,153 @@
+﻿
+<html>
+<head>
+@{
+    ViewBag.Title = "RegisterPage";
+}
+
+</head>
+<body>
+    <input type="hidden" value='@Request.QueryString["Id"]' id="UserId" />
+    <input type="hidden" id="HId" />
+    <input type="hidden" id="HUserDetailsId" value="@Session["UserDetailsId"]" />
+    <section>
+        <div>
+            <div class="container-fluid  form_section">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                       
+                            <h4 class="title mb-4">User Register</h4>
+                       
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <label><span id="#">Name</span> <span class="red">*</span></label>
+                        <div class="forms_height">
+                            <input type="text" id="txtname" name="alpha_dot" class="forms_field" value="" maxlength="75" autocomplete="off">
+                            <p id="Ptxtname" class="error_msg"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <label>Email Id<span class="red">*</span></label>
+                        <div class="forms_height">
+                            <input type="email" id="txtemail" name="email" class="forms_field" value="" autocomplete="off" onkeyup="email(this.id);">
+                            <p id="Ptxtemail" class="error_msg" style="color: red;"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <label>Gender <span class="red">*</span></label>
+                        <div class="forms_height">
+                            <select id="gender" name="gender" class="forms_field">
+                                <option value="0">Select Gender</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Other</option>
+                            </select>
+                            <p id="Pgender" class="error_msg"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <label>Password</label>
+                        <div class="forms_height">
+                            <input type="tel" id="txtPassword" name="numeric_only" class="forms_field" value=""  maxlength="12" autocomplete="off" onkeyup="validatePassword(this.value)">
+                            <p id="PtxtPassword" class="error_msg"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <label>Re-Enter Password</label>
+                        <div class="forms_height">
+                            <input type="tel" id="txtRePassword" name="numeric_only" class="forms_field" value="" maxlength="12" autocomplete="off" onkeyup="validateRePassword()">
+                            <p id="PtxtRePassword" class="error_msg"></p>
+                        </div>
+                    </div>
+                                  
+                    <div class="col-sm-12 pull-right mr10">
+                        <button class="btn btn_submit btn-sm pull-right ml-10" id="btnsubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script src="~/Content/js/Login.js"></script>
+
+    <script>
+    document.getElementById('txtname').addEventListener('input', function() {
+        var name = this.value.trim();
+
+        if (!/^[a-zA-Z]{3,75}$/.test(name)) {
+            document.getElementById('Ptxtname').textContent = 'Name should only contain alphabets (3-75 characters)';
+        } else {
+            document.getElementById('Ptxtname').textContent = '';
+        }
+
+    });
+    function validatePassword(password) {
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)[^ ]{8,12}$/;
+
+        if (!passwordRegex.test(password)) {
+            document.getElementById('PtxtPassword').textContent = 'Password must be 8-12 characters and contain 1 uppercase, 1 lowercase, 1 number, and 1 special character.';
+            return false;
+        } else {
+            document.getElementById('PtxtPassword').textContent = '';
+        }
+        return true;
+    }
+    const originalPasswordInput = document.getElementById('txtPassword');
+
+    function validateRePassword() {
+        const retypedPassword = document.getElementById('txtRePassword').value;
+        const errorMessage = document.getElementById('PtxtRePassword');
+
+        if (retypedPassword !== originalPasswordInput.value) {
+            errorMessage.textContent = 'Passwords do not match.';
+        } else {
+            errorMessage.textContent = '';
+        }
+    }
+    </script>
+    <style>
+        .form_section {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            max-width: 800px; /* Adjust maximum width as needed */
+        }
+
+        .forms_height {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .forms_field {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error_msg {
+            color: red;
+            margin-top: 5px;
+        }
+
+        .btn_submit {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
+
+

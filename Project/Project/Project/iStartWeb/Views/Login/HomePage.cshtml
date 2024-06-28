@@ -1,0 +1,110 @@
+﻿<html>
+<head>
+    @{
+        ViewBag.Title = "HomePage";
+    }
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    
+
+
+
+</head>
+
+<body>
+    <input type="hidden" id="HUserDetailsId" value="@Session["UserDetailsId"]" />
+    <section>
+        <div class="content-wrapper">
+            <section>
+                <div class="container-fluid">
+                    <div class="row page_heading">
+                        <div class="col-md-6 col-sm-12">
+                            <h4 id="TPA_list" class="title mb-4">User Management</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-right">
+                            <button class="btn btn-pink" id="IsAdd">
+                                <i class="fa fa-plus mr-2" aria-hidden="true"></i>Create
+                            </button>
+                            <a class="btn btn-primaryuse btn-xs ml-2" data-placement="bottom" title="Filter & Settings" data-toggle="control-sidebar">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="table_bg" id="tpa-table">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                <table class="table table-bordered table-striped dataTable" id="user_table_list">
+                                    <thead>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Name</th>
+                                            <th>Email Id</th>                                        
+                                            <th class="tbl-status">Status</th>
+                                            <th class="tbl-action">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="user_body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+    <script src="~/Content/js/Login.js"></script>
+
+    <style>
+        /* Centering the content */
+      body, html {
+        height: 100%;
+        margin: 0;
+        background-color: #f0f0f0; /* Optional: Add background color to the whole page */
+    }
+
+        .content-wrapper {
+        width: 100%; /* Ensure it covers the entire width */
+        height: 100%; /* Ensure it covers the entire height */
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in width */
+        background-color: #ffffff; /* Optional: Add background color */
+        border: 1px solid #ccc; /* Optional: Add border for visibility */
+    }
+        .page_heading {
+            margin-bottom: 20px;
+        }
+
+        .btn-pink {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+        }
+
+            .btn-pink:hover,
+            .btn-pink:focus {
+                background-color: #ff4f9b;
+                color: white;
+                border: none;
+            }
+    </style>
+
+</body>
+</html>
+
+
+

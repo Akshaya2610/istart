@@ -1,0 +1,6 @@
+D:\Project\API\iStartWebAPI\DBLibrary\bin\Debug\DBLibrary.dll
+D:\Project\API\iStartWebAPI\DBLibrary\bin\Debug\DBLibrary.pdb
+D:\Project\API\iStartWebAPI\DBLibrary\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Project\API\iStartWebAPI\DBLibrary\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\Project\API\iStartWebAPI\DBLibrary\obj\Debug\DBLibrary.dll
+D:\Project\API\iStartWebAPI\DBLibrary\obj\Debug\DBLibrary.pdb

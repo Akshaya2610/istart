@@ -1,0 +1,9 @@
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DBLibrary.dll
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DBModel.dll
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DBLibrary.pdb
+D:\Project\API\iStartWebAPI\DataAccessLayer\bin\Debug\DBModel.pdb
+D:\Project\API\iStartWebAPI\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Project\API\iStartWebAPI\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\Project\API\iStartWebAPI\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
